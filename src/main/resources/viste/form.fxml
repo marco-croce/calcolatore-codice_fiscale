@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.calcolatorecodicefiscale.controller.FormController">
+   <children>
+      <TextField fx:id="nome" alignment="CENTER" layoutX="425.0" layoutY="67.0" prefHeight="50.0" prefWidth="150.0" promptText="Digitare il nome..." style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 3px;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <DatePicker fx:id="dataNascita" layoutX="149.0" layoutY="144.0" prefHeight="50.0" prefWidth="150.0" promptText="     Digita la data..." style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 3px;" />
+      <RadioButton fx:id="uomo" layoutX="428.0" layoutY="154.0" mnemonicParsing="false" selected="true" text="M">
+         <toggleGroup>
+            <ToggleGroup fx:id="sesso" />
+         </toggleGroup>
+         <font>
+            <Font size="16.0" />
+         </font></RadioButton>
+      <RadioButton layoutX="532.0" layoutY="154.0" mnemonicParsing="false" text="F" toggleGroup="$sesso">
+         <font>
+            <Font size="16.0" />
+         </font></RadioButton>
+      <Button fx:id="calcola" defaultButton="true" layoutX="50.0" layoutY="413.0" mnemonicParsing="false" onAction="#calcolaAction" prefHeight="50.0" prefWidth="150.0" text="CALCOLA">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="300.0" layoutY="77.0" prefHeight="30.0" prefWidth="150.0" text="Nome">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cognome" alignment="CENTER" layoutX="149.0" layoutY="67.0" prefHeight="50.0" prefWidth="150.0" promptText="Digitare il cognome..." style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 3px;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label alignment="CENTER" layoutX="16.0" layoutY="77.0" prefHeight="30.0" prefWidth="150.0" text="Cognome">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="153.0" prefHeight="30.0" prefWidth="150.0" text="Data di nascita">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="luogoNascita" layoutX="299.0" layoutY="236.0" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: blue; -fx-background-color: white; -fx-border-width: 3px;" />
+      <Label alignment="CENTER" layoutX="300.0" layoutY="153.0" prefHeight="30.0" prefWidth="150.0" text="Sesso">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="107.0" layoutY="246.0" prefHeight="30.0" prefWidth="150.0" text="Luogo di nascita">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="32.0" layoutY="522.0" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightblue; -fx-background-radius: 50px; -fx-border-color: blue; -fx-border-radius: 50px; -fx-border-width: 3px;" text="CODICE FISCALE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codice" disable="true" editable="false" layoutX="224.0" layoutY="522.0" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 3px;" />
+      <Button fx:id="copia" layoutX="423.0" layoutY="522.0" mnemonicParsing="false" onAction="#copiaAction" prefHeight="50.0" prefWidth="150.0" text="COPIA">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="cancella" cancelButton="true" layoutX="402.0" layoutY="413.0" mnemonicParsing="false" onAction="#cancellaAction" prefHeight="50.0" prefWidth="150.0" text="CANCELLA">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Separator layoutX="50.0" layoutY="491.0" prefWidth="500.0" style="-fx-background-color: blue;" />
+      <ComboBox fx:id="statoEsteroNascita" disable="true" layoutX="299.0" layoutY="313.0" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: blue; -fx-background-color: white; -fx-border-width: 3px;" />
+      <CheckBox fx:id="statoEstero" layoutX="81.0" layoutY="323.0" mnemonicParsing="false" onAction="#statoEsteroAction" prefHeight="30.0" prefWidth="175.0" text="   Nato all'estero">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></CheckBox>
+      <Label alignment="CENTER" ellipsisString="" layoutX="50.0" layoutY="14.0" prefHeight="30.0" prefWidth="500.0" style="-fx-background-color: lightblue; -fx-background-radius: 25px; -fx-border-color: blue; -fx-border-radius: 25px; -fx-border-width: 3px;" text="Calcolatore Codice Fiscale">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+   </children>
+</AnchorPane>
